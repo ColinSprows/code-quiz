@@ -127,18 +127,19 @@ function endQuiz() {
 }
 
 // High Scores
-function highScore() {
+function highScore(event) {
+    event.preventDefault(event);
     var initials = initialsEl.value.trim();
     var newScore = {
         score: secondsLeft,
         initials: initials
     };
-    var highScores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
 
   highScores.push(newScore);
   window.localStorage.setItem("highScores", JSON.stringify(highScores));
 
-  window.location.href = "highScore.html";
+  window.location.replace("highScore.html");
 }
 
 submit.onclick = highScore;
