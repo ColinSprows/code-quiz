@@ -10,9 +10,27 @@
 <body>
     <header>
         <h3>View high scores</h3>
-        <h3 class="time"></h3>
+        <h3 id="time"></h3>
     </header>
-    
+    <section class="body">
+        <div id="start" > 
+            <p id="start-info">Answer the following questions</p>
+            <button id="start-button">Start Quiz</button>   
+        </div>
+        <div id="questions">
+            <h6 id="question"></h6>
+            <div id="buttons"></div>
+        </div>
+        <div id="end" > 
+            <p id="end-info">You're all done!</p>
+            <h6>Your final score is <span id="final-score">0</span></h6>
+            <form>
+                <label for="example">Enter initials: </label>
+                <input id="initials" type="text" name="text" minlength="1" maxlength="3" required/>
+                <input type="submit" id="submit-button" value="Submit" />
+            </form>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
