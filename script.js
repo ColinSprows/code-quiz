@@ -131,7 +131,7 @@ function endQuiz() {
 
 // High Scores
 function highScore(event) {
-    event.preventDefault(event);
+    event.preventDefault();
     var initials = initialsEl.value.trim();
     var newScore = {
         score: secondsLeft,
