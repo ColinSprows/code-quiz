@@ -7,7 +7,6 @@ var timeEl = document.querySelector("#time");
 var buttonsEl = document.querySelector("#buttons")
 var initialsEl = document.querySelector("#initials");
 var submit = document.querySelector("#submit-button");
-var feedbackEl = document.querySelector('#feedback')
 
 // DATA
 var questionIndex = 0;
