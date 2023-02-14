@@ -33,36 +33,36 @@ var questions = [
         ],
         correctAnswer: '2. Curly Brackets'
     },
-    // {
-    //     question: 'Arrays in JavaScript can be used to store ________.',
-    //     answers: [
-    //         '1. Numbers and strings',
-    //         '2. Other arrays',
-    //         '3. Booleans',
-    //         '4. All of the above',
-    //     ],
-    //     correctAnswer: '4. All of the above'
-    // },
-    // {
-    //     question: 'String values must be enclose within ________ when being assigned to variables.',
-    //     answers: [
-    //         '1. Commas',
-    //         '2. Only brackets',
-    //         '3. Quotes',
-    //         '4. Parenthesis',
-    //     ],
-    //     correctAnswer: '3. Quotes'
-    // },
-    // {
-    //     question: 'A very useful tool used during development and debugging for printing content to the debugger is:',
-    //     answers: [
-    //         '1. JavaScript',
-    //         '2. Terminal/Bash',
-    //         '3. For loops',
-    //         '4. console.log',
-    //     ],
-    //     correctAnswer: '4. console.log'
-    // },
+    {
+        question: 'Arrays in JavaScript can be used to store ________.',
+        answers: [
+            '1. Numbers and strings',
+            '2. Other arrays',
+            '3. Booleans',
+            '4. All of the above',
+        ],
+        correctAnswer: '4. All of the above'
+    },
+    {
+        question: 'String values must be enclose within ________ when being assigned to variables.',
+        answers: [
+            '1. Commas',
+            '2. Only brackets',
+            '3. Quotes',
+            '4. Parenthesis',
+        ],
+        correctAnswer: '3. Quotes'
+    },
+    {
+        question: 'A very useful tool used during development and debugging for printing content to the debugger is:',
+        answers: [
+            '1. JavaScript',
+            '2. Terminal/Bash',
+            '3. For loops',
+            '4. console.log',
+        ],
+        correctAnswer: '4. console.log'
+    },
 ]
 
 // FUNCTIONS
@@ -108,7 +108,7 @@ function showQuestion() {
 // Check Answer
 function checkAnswer() {
     // Check if there are questions left
-    if (questions[questionIndex] === questions[1]) {
+    if (questions[questionIndex] === questions[4]) {
         endQuiz();
     // Check if question is correct
     } else if (this.textContent === questions[questionIndex].correctAnswer) {
@@ -117,6 +117,7 @@ function checkAnswer() {
         showQuestion();
     } else {
         alert("Wrong Answer")
+        secondsLeft -= 15;
     }
 }
 
