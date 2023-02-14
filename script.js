@@ -7,6 +7,7 @@ var timeEl = document.querySelector("#time");
 var buttonsEl = document.querySelector("#buttons")
 var initialsEl = document.querySelector("#initials");
 var submit = document.querySelector("#submit-button");
+var feedbackEl = document.querySelector('#feedback')
 
 // DATA
 var questionIndex = 0;
@@ -83,8 +84,10 @@ function setTime() {
     var timerInterval = setInterval(function() {
         secondsLeft--;
         timeEl.textContent = "Time: " + secondsLeft;
-        if(secondsLeft === 0) {
+        if(secondsLeft <= 0) {
             clearInterval(timerInterval);
+            questionsEl.setAttribute("style", "display: none")
+            window.location.replace("highScore.html");
         }
     }, 1000);
 }
@@ -133,7 +136,7 @@ function endQuiz() {
 // High Scores
 function highScore(event) {
     event.preventDefault();
-    var initials = initialsEl.value.trim();
+    var initials = initialsEl.value.toUpperCase();
     var newScore = {
         score: secondsLeft,
         initials: initials

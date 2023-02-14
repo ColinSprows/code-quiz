@@ -8,19 +8,102 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 100px;
+}
+
+#start button {
+    width: 20%;
+    margin: 12px auto;
+    color: white;
+    background: darkblue;
+    padding: 8px;
+    border-radius: 8px;
+    border: 0;
+}
+
 header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 48px;
 }
 
 header h3 {
     font-weight: 100;
+    font-size: 16px;
+}
+
+header a {
+    text-decoration: none;
 }
 
 #questions {
     display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 100px;
+}
+
+#buttons {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 4px;
+}
+
+#buttons button {
+    margin: 2px;
+    width: 150%;
+    color: white;
+    background: darkblue;
+    padding: 8px;
+    border-radius: 8px;
+    border: 0;
+    display: block;
+    text-align: left;
 }
 
 #end {
     display: none;
+    text-align: center;
+    padding: 100px;
+}
+
+#end form {
+    margin-top: 24px;
+}
+
+#highscores-body {
+    text-align: center;
+}
+
+#highscores-body h2 {
+    margin: 24px;
+}
+
+#highscores-body ol {
+    list-style-position: inside;
+}
+
+#bottom-buttons{
+    margin: 24px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#bottom-buttons button {
+    margin: 2px auto;
+    width: auto;
+    color: white;
+    background: darkblue;
+    padding: 8px;
+    border-radius: 8px;
+    border: 0;
+    display: block;
+    text-align: left;
 }
