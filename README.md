@@ -4,6 +4,10 @@
 
 I made this to quiz others, including myself, on their understanding of JavaScript. I learned a lot about localStorage!
 
+## Installation
+
+Navigate to:
+https://colinsprows.github.io/code-quiz/highScore.html
 
 ## Usage
 
