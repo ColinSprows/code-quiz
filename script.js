@@ -66,8 +66,11 @@ var questions = [
 ]
 
 // FUNCTIONS
-// Start button function
+// Start button function (added if statement to remove error)
+if (start) {
 start.addEventListener("click", startQuiz);
+}
+
 function startQuiz(){
     start.setAttribute("style", "display: none")
     questionsEl.setAttribute("style", "display: block")
@@ -142,4 +145,6 @@ function highScore(event) {
   window.location.replace("highScore.html");
 }
 
+if (submit) {
 submit.onclick = highScore;
+}
