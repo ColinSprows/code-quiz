@@ -107,3 +107,9 @@ header a {
     display: block;
     text-align: left;
 }
+
+#feedback {
+    display: none;
+    margin-top: 12px;
+    color: blue;
+}

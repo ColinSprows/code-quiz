@@ -7,6 +7,7 @@ var timeEl = document.querySelector("#time");
 var buttonsEl = document.querySelector("#buttons")
 var initialsEl = document.querySelector("#initials");
 var submit = document.querySelector("#submit-button");
+var feedbackEl = document.querySelector("#feedback")
 
 // DATA
 var questionIndex = 0;
@@ -117,10 +118,35 @@ function checkAnswer() {
         buttonsEl.innerHTML = "";
         questionIndex++;
         showQuestion();
+        gotItRight();
     } else {
-        alert("Wrong Answer")
+        // alert("Wrong Answer")
+        gotItWrong();
         secondsLeft -= 15;
     }
+}
+
+function gotItWrong() {
+    // show message
+        // put message text in its place
+        feedbackEl.textContent = "Wrong";
+        feedbackEl.setAttribute("style", "display: block")
+        // make message area show up
+            // set delay 
+            // hide message
+        if (this.textContent !== questions[questionIndex].correctAnswer) {
+            setTimeout(function() {
+                feedbackEl.setAttribute("style", "display: none")
+            }, 1000);
+        }
+}
+
+function gotItRight() {
+    feedbackEl.textContent = "Correct!";
+    feedbackEl.setAttribute("style", "display: block")
+        setTimeout(function() {
+            feedbackEl.setAttribute("style", "display: none")
+        }, 1000);
 }
 
 // End Quiz
